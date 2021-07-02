@@ -7,6 +7,7 @@ const Home = ({trendStock, accountBalance, myStocks}) => {
     const trendStockResult = JSON.parse(sessionStorage.getItem('searchStocks'))
 
     const data = sessionStorage.getItem('username')
+    console.log(trendStockResult)
 
   return (
       <div className='trending'>
@@ -16,10 +17,9 @@ const Home = ({trendStock, accountBalance, myStocks}) => {
               <h3>Top Trending Stocks</h3>
               <div>
               <ul>
-                {/* trendStock.finance.result[0].quotes */}
                   {trendStockResult.finance.result[0].quotes.map(stock => {
                     return (
-                      <li className="trendList" key={stock.symbol}>{stock.symbol}</li>
+                      <li className="trendList" key={stock.symbol}>{stock.symbol} Current Value:{stock.regularMarketPrice}</li>
                       )
                     })}  
               </ul>

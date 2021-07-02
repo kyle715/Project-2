@@ -4,7 +4,7 @@ const MyStocks = ({accountBalance, setAccountBalance}) => {
     
     const loggedIn = sessionStorage.getItem('loggedIn')
     
-    const [myStocks, setMyStocks] = useState(JSON.parse(sessionStorage.getItem('stock')) || [])
+    const [myStocks, setMyStocks] = useState(JSON.parse(localStorage.getItem('stock')) || [])
     
     const sellStock = (e) => {
         e.preventDefault()
@@ -13,10 +13,10 @@ const MyStocks = ({accountBalance, setAccountBalance}) => {
         let numStockValue = parseInt(stockValue)
         const newAccountBalance = numAccountBalance + numStockValue + 1
         setAccountBalance(newAccountBalance)
-        sessionStorage.setItem('accountBalance', newAccountBalance)
+        localStorage.setItem('accountBalance', newAccountBalance)
         myStocks.splice(e.target.parentElement.id, 1)
         setMyStocks(myStocks)
-        sessionStorage.setItem('stock', JSON.stringify(myStocks))
+        localStorage.setItem('stock', JSON.stringify(myStocks))
     }
     
     // useEffect(() => {

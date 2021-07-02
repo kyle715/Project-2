@@ -60,7 +60,7 @@ const Buystocks = ({stockSearch, setStockSearch, myStocks, setMyStocks, accountB
             const newAccountBalance = accountBalance - stockPrice
             
             setAccountBalance(newAccountBalance)
-            sessionStorage.setItem('accountBalance', newAccountBalance)
+            localStorage.setItem('accountBalance', newAccountBalance)
             
         } else {
             console.log(stockPrice)
@@ -71,7 +71,7 @@ const Buystocks = ({stockSearch, setStockSearch, myStocks, setMyStocks, accountB
 
 
     useEffect(() => {
-        sessionStorage.setItem('stock', JSON.stringify(myStocks))
+        localStorage.setItem('stock', JSON.stringify(myStocks))
     }, [myStocks])
         
     

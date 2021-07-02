@@ -6,7 +6,7 @@ const Profileblock = ({username, accountBalance, myStocks}) => {
     
     return (
         <div className='profileBlock'>
-            <img classname='profileImage' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrb7XeVpElaj3yF0M2zBadpBwR1H32HQQumw&usqp=CAU' />
+            <img className='profileImage' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrb7XeVpElaj3yF0M2zBadpBwR1H32HQQumw&usqp=CAU' />
             <div>
                 <h3 className='profileName'>{username}</h3>
                 <h3 className='profileBalance'>Account Balance:{accountBalance}</h3>

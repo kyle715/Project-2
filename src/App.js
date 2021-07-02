@@ -11,8 +11,8 @@ import { Route } from 'react-router-dom'
 
 function App() {
 
-  const [accountBalance, setAccountBalance] = useState(sessionStorage.getItem('accountBalance') || 10000)
-  const [myStocks, setMyStocks] = useState(JSON.parse(sessionStorage.getItem('stock')) || [])
+  const [accountBalance, setAccountBalance] = useState(localStorage.getItem('accountBalance') || 10000)
+  const [myStocks, setMyStocks] = useState(JSON.parse(localStorage.getItem('stock')) || [])
   const [loggedIn, setLoggedIn] = useState(sessionStorage.getItem('loggedIn') || false)
   const [stockSearch, setStockSearch] = useState([])
   const [trendStock, setTrendStock] = useState(sessionStorage.getItem('searchStocks') || [])

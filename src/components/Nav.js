@@ -1,10 +1,16 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 const Mynav = ({loggedIn, accountBalance}) => {
 
     const newAccountBalance = parseInt(accountBalance)
+
+    const logOut = () => {
+        sessionStorage.removeItem('loggedIn')
+        sessionStorage.removeItem('username')
+        return <Redirect to='/' />
+    }
     
 
     if(!loggedIn){
@@ -22,7 +28,7 @@ const Mynav = ({loggedIn, accountBalance}) => {
             <Nav.Link href="/home">Account Balance: ${newAccountBalance}</Nav.Link>
             <Nav.Link href="/buyStock">Buy Stocks</Nav.Link>
             <Nav.Link href="/myStocks">My Stocks</Nav.Link>
-            <Nav.Link href="/home">PI</Nav.Link>
+            <Nav.Link href="/"><button onClick={logOut}>Log Out</button></Nav.Link>
             </Nav>
         </Navbar>
     );
