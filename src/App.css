@@ -1,0 +1,79 @@
+body {
+    background-image: url('https://www.profit2.com/wp-content/uploads/2018/08/Grey-Gradient-Background.jpg');
+    background-size: cover;
+}
+h1 {
+    text-decoration: underline;
+    padding: 100px;
+}
+h2 {
+    padding: 10px;
+    border-bottom: 5px solid black;
+}
+li {
+    font-size: large;
+    padding: 10px;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.signInButton {
+    background-color: black;
+    padding: 3px 32px;
+}
+p {
+  text-align: center;
+}
+.mainPage {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+.welcome{
+    grid-column: 2;
+    margin:auto;
+    padding: 50px;
+}
+.logIn {
+    grid-column: 2;
+    grid-row: 2;
+}
+#logInForm{
+    text-align: center;
+}
+.searchForm {
+    padding: 15px;
+}
+.trending {
+    display: grid;
+    grid-template-columns: 25% 1fr 25%;
+    grid-template-rows: 1fr 3fr 25%;
+}
+.trendArea {
+    grid-row: 2;
+}
+.trendList {
+    padding: 0;
+    font-size: 12px;
+}
+img {
+    height:100px;
+    width:100px;
+}
+.profileBlock {
+    grid-column: 3;
+    grid-row: 2;
+    border: black solid 1px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profileStocks {
+    grid-row: 2;
+}
