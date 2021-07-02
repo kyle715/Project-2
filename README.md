@@ -1,3 +1,8 @@
+#Description
+
+This is a mock Stock Portfolio website that uses local and session stoarage to mimic a back end server using only React in a SPA. Allowing you to "log in" search for and buy stocks
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
